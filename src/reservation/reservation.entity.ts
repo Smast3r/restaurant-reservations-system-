@@ -11,6 +11,9 @@ export class Reservation {
     @ManyToOne(()=> Restaurant, (restaurant )=>restaurant.reservations)
     restaurant : Restaurant 
 
+    @Column()
+    start_time 
 
+    
 
 }

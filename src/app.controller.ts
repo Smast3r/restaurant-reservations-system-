@@ -11,4 +11,10 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+
+  @Get('reservations')
+  getReservations(){
+    return this.appService.getReservations()
+  }
 }

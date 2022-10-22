@@ -1,5 +1,5 @@
 import { Reservation } from "src/reservation/reservation.entity";
-import { Entity, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 
 
@@ -10,4 +10,9 @@ export class Restaurant {
 
     @OneToMany(()=> Reservation , (reservation)=> reservation.restaurant)
     reservations: Reservation[]
+
+    @Column()
+    waiting_time:string
+
+    
 }
